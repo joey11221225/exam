@@ -28,7 +28,7 @@ class UserController extends Controller
 
         Auth::attempt($form);
         if(Auth::check()){
-            return response("Login successful.");
+            return redirect("/product");
         }else{
             return response("Login failed.");
         }
